@@ -1,4 +1,5 @@
-import styles from "./MovieCard.module.css"
+import styles from "./MovieCard.module.css";
+import React from 'react';
 
 //import Api from "./api.js"
 

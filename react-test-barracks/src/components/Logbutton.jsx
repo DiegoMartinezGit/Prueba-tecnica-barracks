@@ -1,5 +1,6 @@
 import styles from "./Navbar.module.css";
 import {useNavigate} from "react-router-dom";
+import React from 'react';
 export function Logbutton({type}){
     const API_URL= "http://localhost:4000/"
     const navigate=useNavigate();
