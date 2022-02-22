@@ -2,7 +2,7 @@
     background-color: azure;
     align-items: center;
 }
-container{
+.divcontainer {
     height: 200px;
     width:200px;
     position: relative;
