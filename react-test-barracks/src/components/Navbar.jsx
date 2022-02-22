@@ -1,6 +1,7 @@
 import styles from "./Navbar.module.css"
 import {  Link } from "react-router-dom";
 import { Logbutton } from "./Logbutton";
+import React from 'react';
 
 
 export function Navbar(){
