@@ -1,19 +1,45 @@
 .login{
+    
     background-color: azure;
     align-items: center;
 }
-.divcontainer {
+.divcontainer{
     height: 200px;
     width:200px;
     position: relative;
-    display: flex;
-    transform: translate(50%,50%);
     border: 1px solid;
     padding:10px;
     color: red;
     border-radius: 5px;
+    
 }
 
-label {
-    text-align: right;
+.grid{
+    position: fixed;
+    width:100%;
+    height:40%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 1fr; 
+    
+    box-sizing: border-box;
 }
+form{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+}
+label:first-child{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    
+}
+form input[type="submit"]{
+    width: 40%;
+}
+
+

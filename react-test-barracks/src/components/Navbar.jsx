@@ -18,7 +18,7 @@ export function Navbar(){
             <Link className={styles.NavLink} to="/Users">Users</Link>
             </li>
             <li>
-            <Link className={styles.NavLink} to="/Register">Sign in</Link>
+            <Link className={styles.NavLink} to="/Register">Sign Up</Link>
             </li>
             </div>
             <Link className={styles.NavLink} to='/'>

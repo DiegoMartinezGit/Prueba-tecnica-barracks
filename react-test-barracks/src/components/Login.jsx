@@ -43,7 +43,6 @@ export function Login(props){
             alert("user already registered!!")
         }
         else if(res.status===201){
-            alert("Register succesfull!!")
             navigate("/login")
         }
         else{
@@ -90,18 +89,19 @@ export function Login(props){
     }
     
     return(
-        <div className={styles.divcontainer}>
-            <form onSubmit={handleSubmit}>
-                <label>{props.type}</label>
-                <br/>
-                <label htmlFor="email">Email</label>
-                <input type="text" name="email" id="email" value={inputs.email||""} onChange={handleChange} className={styles.login} placeholder="Enter e-mail" required></input>
-                <br/>
-                <label htmlFor="password">Password</label>
-                <input type="password" name="password" id="password" value={inputs.password||""}onChange={handleChange} placeholder="Enter Password" className="{styles.login}" required></input>
-                <br/>
-                <input type="submit" value={props.type}></input>
-            </form>
+        <div className={styles.grid}>
+            <div className={styles.divcontainer}>
+                <form onSubmit={handleSubmit}>
+                    <label>{props.type}</label>
+                    <label htmlFor="email">Email</label>
+                    <input type="email" name="email" id="email" value={inputs.email||""} onChange={handleChange} className={styles.login} placeholder="Enter e-mail" required></input>
+                    
+                    <label htmlFor="password">Password</label>
+                    <input type="password" name="password" id="password" value={inputs.password||""}onChange={handleChange} placeholder="Enter Password" className="{styles.login}" required></input>
+                    
+                    <input type="submit" value={props.type}></input>
+                </form>
+            </div>
         </div>
     
     );

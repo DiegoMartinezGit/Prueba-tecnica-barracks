@@ -28,20 +28,20 @@ export function Logbutton({type}){
     
             sessionStorage.clear();
         })
-        
+        console.log(sessionStorage.getItem("lenght"))
     };
-    //if (sessionStorage.getItem("lenght")!==0){
-        return(
-            <div className={styles.NavMenu}>
+    
+    
+        return( <>
+                {/* {(sessionStorage.getItem("lenght")!==null) && */}
+                <div className={styles.NavMenu}>
                     <div className={styles.NavBtn}>
                         <button className={styles.NavBtnLink} onClick={resetSessionStorage}>
                             Log out
                         </button>
                     </div>
                 </div>
-        );
-    // }else{
-    //     return <></>
-    // }
-    
+                {/* } */}
+                </>
+                );
 }

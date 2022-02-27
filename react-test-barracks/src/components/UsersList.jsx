@@ -34,7 +34,7 @@ export function UsersList({session}){
             }
             else{
                 console.log(res)
-                alert("Upps! something happen ")
+                alert("Unauthorized User!!")
                 navigate("/Login")
             }   
         }) 
