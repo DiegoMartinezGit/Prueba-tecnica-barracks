@@ -2,7 +2,7 @@ import styles from "./Login.module.css"
 import React,{useState} from "react";
 import {useNavigate} from "react-router-dom";
 export function Login(props){
-    const API_URL= "http://localhost:4000/"
+    const API_URL= "http://ec2-54-152-66-249.compute-1.amazonaws.com:4000/"
     const [inputs, setInputs] = useState({});
     const navigate=useNavigate();
 

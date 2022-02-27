@@ -2,7 +2,7 @@ import styles from "./Navbar.module.css";
 import {useNavigate} from "react-router-dom";
 import React from 'react';
 export function Logbutton({type}){
-    const API_URL= "http://localhost:4000/"
+    const API_URL= "http://ec2-54-152-66-249.compute-1.amazonaws.com:4000/"
     const navigate=useNavigate();
 
     function  resetSessionStorage(){

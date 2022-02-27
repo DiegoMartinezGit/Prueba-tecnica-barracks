@@ -7,7 +7,7 @@ import {useNavigate} from "react-router-dom";
 
 
 export function UsersList({session}){
-    const API_URL= "http://localhost:4000/"
+    const API_URL= "http://ec2-54-152-66-249.compute-1.amazonaws.com:4000/"
     const [render, setRender] = useState(false);
     const [users, setUsers] = useState([])
     const navigate=useNavigate();

@@ -30,27 +30,28 @@ app.use(session({
     resave: false
 
 }));
+app.enable('trust proxy')
  const corsOptions = {
    origin: true, //included origin as true
    credentials: true, //included credentials as true
 };
-// app.use(function (req, res, next) {
+ app.use(function (req, res, next) {
 //   // Website you wish to allow to connect
-//   //res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3004');
+res.setHeader('Access-Control-Allow-Origin', '*');
 
 //   // Request methods you wish to allow
-//   //res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
 
 //   // Request headers you wish to allow
-//   //res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
 
 //   // Set to true if you need the website to include cookies in the requests sent
 //   // to the API (e.g. in case you use sessions)
-//   //res.setHeader('Access-Control-Allow-Credentials', true);
+res.setHeader('Access-Control-Allow-Credentials', true);
 
 //   // Pass to next layer of middleware
-//   next();
-// });
+   next();
+});
 
 app.use(cors(corsOptions));
 app.use(morgan("dev"));
@@ -113,6 +114,7 @@ app.put('/login',(req,res)=>{
               .then(response=>{
                 console.log("session and device updated")
                 req.session.usuario=rows[0];
+                console.log(req.sessionID);
                 res.statusCode=200;
                 res.json({"ok":"Log in perfect","usuario": rows[0]});
                 conn.end();
@@ -137,7 +139,7 @@ app.delete('/logout',(req,res)=>{
 });
 
 app.get('/movies', function (req, res) {
-  if (req.session.usuario){
+  if (req.session.usuario!==undefined){
     res.statusCode=200;
     res.json({"ok":"oki doki"});
   }

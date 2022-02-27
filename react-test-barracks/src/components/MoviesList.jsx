@@ -4,7 +4,7 @@ import styles from "./MoviesList.module.css"
 import  React,{useEffect,useState} from "react";
 import {useNavigate} from "react-router-dom"
 export function MoviesList(){
-    const API_URL= "http://localhost:4000/";
+    const API_URL= "http://ec2-54-152-66-249.compute-1.amazonaws.com:4000/";
     const navigate=useNavigate();
     const [render, setRender] = useState(false);
     useEffect( () => {
