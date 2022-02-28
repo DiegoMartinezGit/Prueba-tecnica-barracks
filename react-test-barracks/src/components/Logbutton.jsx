@@ -33,7 +33,6 @@ export function Logbutton({type}){
     
     
         return( <>
-                {/* {(sessionStorage.getItem("lenght")!==null) && */}
                 <div className={styles.NavMenu}>
                     <div className={styles.NavBtn}>
                         <button className={styles.NavBtnLink} onClick={resetSessionStorage}>
@@ -41,7 +40,6 @@ export function Logbutton({type}){
                         </button>
                     </div>
                 </div>
-                {/* } */}
                 </>
                 );
 }

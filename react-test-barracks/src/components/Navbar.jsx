@@ -11,21 +11,23 @@ export function Navbar(){
         <div className={styles.Nav}>
             <div className={styles.Bars}/>
             <div className={styles.NavMenu}>
-            <li>
-            <Link className={styles.NavLink} to="/">Home</Link>
-            </li>
-            <li>
-            <Link className={styles.NavLink} to="/Users">Users</Link>
-            </li>
-            <li>
-            <Link className={styles.NavLink} to="/Register">Sign Up</Link>
-            </li>
+            {sessionStorage.getItem("lenght")!==null &&
+                <>
+                <li>
+                <Link className={styles.NavLink} to="/">Home</Link>
+                </li>
+                <li>
+                <Link className={styles.NavLink} to="/Users">Users</Link>
+                </li>
+                </>
+            }
             </div>
             <Link className={styles.NavLink} to='/'>
                 <h1>NETFLIX</h1>
             </Link>
+            {sessionStorage.getItem("lenght")!==null &&
             <Logbutton></Logbutton>
-            
+            }
         </div>
     );
 }
