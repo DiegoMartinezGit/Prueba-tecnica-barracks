@@ -1,6 +1,6 @@
 import styles from "./Login.module.css"
 import React,{useState} from "react";
-import {useNavigate,Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 export function Login(props){
     const API_URL= "http://ec2-54-152-66-249.compute-1.amazonaws.com:4000/"
     const [inputs, setInputs] = useState({});
@@ -98,10 +98,7 @@ export function Login(props){
                     
                     <label htmlFor="password">Password</label>
                     <input type="password" name="password" id="password" value={inputs.password||""}onChange={handleChange} placeholder="Enter Password" className="{styles.login}" required></input>
-                    {
-                        props.type==="Login"&&
-                        <Link to="/Register">Sign Up</Link>
-                    }
+                    
                     <input type="submit" value={props.type}></input>
                 </form>
             </div>
